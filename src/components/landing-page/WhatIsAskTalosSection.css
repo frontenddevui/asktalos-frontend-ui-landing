@@ -1,0 +1,905 @@
+/* WhatIsAskTalosSection Styles - Converted from Angular SCSS */
+
+/* Bot Content Wrapper */
+.bot-content-wrapper {
+  width: 100%;
+}
+
+.bot-content {
+  position: relative;
+}
+
+/* Swiper Container */
+.bot-content .mySwiper {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .mySwiper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bot-content .mySwiper {
+    width: 100%;
+  }
+}
+
+/* Swiper Wrapper */
+.bot-content .swiper-wrapper {
+  align-items: center;
+  margin-left: 0px;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-wrapper {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-wrapper {
+    order: 1;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Swiper Slide */
+.bot-content .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Image Container */
+.bot-content .change-bot-img {
+  width: 50%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: 0;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.bot-content .change-bot-img img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .change-bot-img img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .bot-content .change-bot-img {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .change-bot-img {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto 0;
+    height: auto;
+    min-height: 400px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .change-bot-img {
+    width: 100%;
+    min-height: 300px;
+  }
+}
+
+/* Pagination Container */
+.bot-content .swiper-pagination {
+  display: flex !important;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  background-color: transparent;
+  position: absolute !important;
+  z-index: 10;
+}
+
+@media screen and (min-width: 992px) {
+  .bot-content-wrapper {
+    background: transparent;
+    padding: 20px;
+  }
+
+  .bot-content .change-bot-img {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .bot-content .swiper-pagination {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination {
+    height: 590px;
+    width: 470px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination {
+    margin: auto;
+    transform: rotate(-90deg);
+    height: 600px;
+    width: 470px;
+    position: relative !important;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 631px) {
+  .bot-content .swiper-pagination {
+    height: 570px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination {
+    height: 500px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination {
+    width: 370px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination {
+    width: 350px;
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .bot-content .swiper-pagination {
+    left: -20px !important;
+  }
+}
+
+/* Center Robot Icon (::after pseudo-element) */
+.bot-content .swiper-pagination::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  margin: auto;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination::after {
+    width: 270px;
+    height: 270px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination::after {
+    height: 220px;
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination::after {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination::after {
+    width: 135px;
+    height: 135px;
+  }
+}
+
+/* Pagination Bullets */
+.bot-content .swiper-pagination-bullet {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination-bullet {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .bot-content .swiper-pagination-bullet {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet {
+    height: 50px;
+    width: 50px;
+    background-size: 30px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet {
+    height: 45px;
+    width: 45px;
+    background-size: 25px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet {
+    width: 36px;
+    height: 36px;
+    background-size: 20px;
+  }
+}
+
+/* Bullet Labels (::before pseudo-element) */
+.bot-content .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  line-height: 120%;
+  margin-top: 6px;
+  font-size: 18px;
+  top: 75px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination-bullet::before {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet::before {
+    white-space: nowrap;
+    top: 66px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet::before {
+    font-size: 16px;
+    top: 55px;
+    white-space: wrap;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet::before {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet::before {
+    font-size: 11px;
+    top: 40px;
+  }
+}
+
+/* Bullet Line Connectors (::after pseudo-element) */
+.bot-content .swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 100%;
+  margin: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .bot-content .swiper-pagination-bullet::after {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet::after {
+    width: 30px;
+    transform: rotate(-90deg);
+  }
+}
+
+/* Active Bullet State */
+.bot-content .swiper-pagination-bullet-active {
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Bullet 1 - Chatbot Positioning */
+.bot-content .swiper-pagination-bullet[data-index="0"] {
+  border-color: #f27e2c;
+  top: 32px;
+  left: 23%;
+}
+
+@media screen and (min-width: 1440px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"] {
+    left: 24%;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"] {
+    top: 45px;
+    left: 22%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"] {
+    top: 35px;
+    left: 21%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"] {
+    top: 60px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"] {
+    top: 26px;
+    left: 60px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"] {
+    top: 26px;
+    left: 46px;
+  }
+}
+
+.bot-content .swiper-pagination-bullet[data-index="0"]::after {
+  left: 0;
+  right: 0;
+  top: 100%;
+  transform: translate(2px, 100%);
+  background-size: 15px;
+  width: 30px;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"]::after {
+    background-size: 15px;
+    width: 30px;
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"]::after {
+    left: 180%;
+    right: -100%;
+    top: 0;
+    transform: translate(100%, -12px) rotate(-90deg);
+    background-size: 15px;
+    width: 15px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"]::after {
+    background-size: 15px;
+    width: 15px;
+    left: 210%;
+    top: -10px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"]::after {
+    right: -60%;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"]::after {
+    width: 10px;
+    background-size: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="0"]::after {
+    right: -60%;
+    top: -20px;
+    left: 240%;
+  }
+}
+
+.bot-content .swiper-pagination-bullet-active[data-index="0"] {
+  background-color: #f27e2c;
+}
+
+/* Bullet 2 - CRM Positioning */
+.bot-content .swiper-pagination-bullet[data-index="1"] {
+  border-color: #ea2e56;
+  right: 60px;
+  top: 100px;
+}
+
+@media screen and (min-width: 1440px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"] {
+    right: 60px;
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"] {
+    right: 135px;
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"] {
+    right: 130px;
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"] {
+    right: 150px;
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"] {
+    right: 170px;
+    top: 40px;
+  }
+}
+
+.bot-content .swiper-pagination-bullet[data-index="1"]::after {
+  left: -37%;
+  right: 0;
+  width: 112px;
+  top: 16%;
+  transform: translate(-80%, 39%) rotate(-3deg);
+  height: 139px;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"]::after {
+    width: 140px;
+    height: 120px;
+    top: 30%;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"]::after {
+    left: 90%;
+    right: 0;
+    width: 140px;
+    top: 80%;
+    transform: translate(15%, 3%) rotate(-90deg);
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"]::after {
+    left: 100%;
+    height: 100px;
+    width: 100px;
+    top: 100%;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"]::after {
+    height: 80px;
+    width: 90px;
+    top: 85%;
+    left: 85%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="1"]::after {
+    height: 70px;
+    width: 80px;
+  }
+}
+
+.bot-content .swiper-pagination-bullet-active[data-index="1"] {
+  background-color: #ea2e56;
+}
+
+/* Bullet 3 - Calling Solution Positioning */
+.bot-content .swiper-pagination-bullet[data-index="2"] {
+  border-color: #ff862f;
+  right: 10px;
+  bottom: 0;
+  top: 40%;
+  transform: translate(10px, 50%);
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="2"] {
+    transform: translate(10px, 50%) rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="2"] {
+    right: 40px;
+    bottom: 3px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="2"] {
+    right: 70px;
+    bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="2"] {
+    right: 100px;
+  }
+}
+
+.bot-content .swiper-pagination-bullet[data-index="2"]::after {
+  left: -337px;
+  right: 0;
+  width: 220px;
+  height: 17px;
+  top: -1px;
+  bottom: 0;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination-bullet[data-index="2"]::after {
+    width: 220px;
+    left: -337px;
+    height: 17px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="2"]::after {
+    left: -90px;
+    right: 0;
+    width: 250px;
+    height: 20px;
+    top: 240px;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="2"]::after {
+    left: -73px;
+    top: 205px;
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="2"]::after {
+    top: 170px;
+    left: -50px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="2"]::after {
+    top: 150px;
+    left: -55px;
+    width: 150px;
+  }
+}
+
+.bot-content .swiper-pagination-bullet-active[data-index="2"] {
+  background-color: #ff862f;
+}
+
+/* Bullet 4 - WhatsApp Business API Positioning */
+.bot-content .swiper-pagination-bullet[data-index="3"] {
+  border-color: #31c072;
+  right: 75px;
+  bottom: 114px;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"] {
+    bottom: 60px;
+    right: 67px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"] {
+    right: 130px;
+    bottom: 55px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"] {
+    right: 135px;
+    bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"] {
+    right: 155px;
+    bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"] {
+    right: 170px;
+    bottom: 30px;
+  }
+}
+
+.bot-content .swiper-pagination-bullet[data-index="3"]::after {
+  left: -55%;
+  right: 0;
+  width: 180px;
+  height: 180px;
+  transform: translate(-85%, -42%);
+  bottom: 50%;
+  top: -70%;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"]::after {
+    width: 180px;
+    height: 180px;
+    left: -55%;
+    transform: translate(-85%, -42%);
+    bottom: 50%;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"]::after {
+    left: -100%;
+    right: 0px;
+    width: 180px;
+    height: 180px;
+    transform: translate(-80%, 40%) rotate(-90deg);
+    bottom: -30%;
+    top: 85%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"]::after {
+    left: -120%;
+    bottom: -80%;
+    top: 30%;
+    width: 120px;
+    height: 120px;
+    transform: translate(-70%, 40%) rotate(-90deg);
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"]::after {
+    width: 100px;
+    height: 100px;
+    left: -90%;
+    bottom: -90%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="3"]::after {
+    width: 90px;
+    height: 90px;
+    left: -110%;
+    bottom: -110%;
+  }
+}
+
+.bot-content .swiper-pagination-bullet-active[data-index="3"] {
+  background-color: #31c072;
+}
+
+/* Bullet 5 - Emails Positioning */
+.bot-content .swiper-pagination-bullet[data-index="4"] {
+  border-color: #ff862f;
+  bottom: 45px;
+  left: 22%;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"] {
+    bottom: 35px;
+    left: 23%;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"] {
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"] {
+    bottom: 30px;
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"] {
+    bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"] {
+    bottom: 20px;
+    left: 14%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"] {
+    bottom: 20px;
+    left: 13%;
+  }
+}
+
+.bot-content .swiper-pagination-bullet[data-index="4"]::after {
+  left: 0;
+  right: 0;
+  bottom: 30%;
+  transform: translate(0px, -46%);
+  width: 15px;
+  height: 144px;
+  background-size: 15px;
+}
+
+@media screen and (min-width: 1400px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"]::after {
+    height: 144px;
+    background-size: 15px;
+  }
+}
+
+@media screen and (max-width: 991.59px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"]::after {
+    left: -130%;
+    right: 180%;
+    bottom: -30px;
+    transform: translate(-170%, 12%) rotate(-90deg);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"]::after {
+    left: -270%;
+    right: 110%;
+    transform: translate(-140%, 15%) rotate(-90deg);
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"]::after {
+    right: 85%;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"]::after {
+    right: 220%;
+    height: 115px;
+    background-size: contain;
+    transform: translate(20%, 0%) rotate(-90deg);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .bot-content .swiper-pagination-bullet[data-index="4"]::after {
+    right: 230%;
+    height: 95px;
+  }
+}
+
+.bot-content .swiper-pagination-bullet-active[data-index="4"] {
+  background-color: #ff862f;
+}

@@ -1,0 +1,16 @@
+# AskTalos robots.txt
+User-agent: *
+Allow: /
+
+# Disallow admin and private routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Keep non-content utility pages out of the index
+Disallow: /test-demo
+Disallow: /job-application
+Disallow: /linktree
+
+# Sitemap
+Sitemap: https://asktalos.com/sitemap.xml

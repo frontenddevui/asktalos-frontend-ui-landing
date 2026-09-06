@@ -1,0 +1,1163 @@
+/* Self-hosted Poppins via @fontsource (no render-blocking Google Fonts) */
+@import "@fontsource/poppins/300.css";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/700.css";
+@import "@fontsource/poppins/800.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  /* Utility: keep serif class consistent */
+  .font-serif,
+  .playfair {
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  :root {
+    /* AskTalos Brand Colors - Single Source of Truth */
+    --color-primary: 25 100% 59%;
+    /* #f27e2c */
+    --color-secondary: 203 78% 24%;
+    /* #0e496e */
+    --color-body: 216 15% 15%;
+    /* #212529 */
+    --background: 220 20% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+    --primary-light: 25 100% 67%;
+    --primary-dark: 25 100% 47%;
+    --secondary: var(--color-secondary);
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 203 78% 34%;
+    --primary: 25 100% 50%;
+    --brand: 25 95% 57%;
+    /* #f27e2c */
+    --ink-900: 216 15% 15%;
+    /* #212529 */
+    --ink-600: 240 4% 31%;
+    /* #4B4B55 */
+    --ink-400: 240 4% 56%;
+    /* #8B8B95 */
+    --bg-50: 210 17% 98%;
+    /* #f8f9fa */
+    --card: 0 0% 100%;
+    /* #FFFFFF */
+
+    /* CRM Orange Colors */
+    --crm-primary: 25 95% 57%;
+    /* #f27e2c */
+    --crm-secondary: 25 100% 67%;
+    /* lighter variant */
+    --crm-light: 25 100% 77%;
+    /* even lighter */
+    --crm-peach: 28 100% 77%;
+    /* #FFB88C */
+    --crm-hover: 25 100% 47%;
+    /* darker for hover */
+
+    /* Status Colors */
+    --success: 142 76% 36%;
+    /* #22C55E */
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 46%;
+    --ok: 142 71% 45%;
+    /* #12B76A */
+    --danger: 348 83% 47%;
+    /* #E11D48 */
+    --warn: 32 95% 44%;
+    /* #F59E0B */
+    --info: 213 94% 68%;
+    /* #2563EB */
+
+    /* System Colors */
+    --background: var(--bg-50);
+    --foreground: var(--ink-900);
+    --popover: var(--card);
+    --popover-foreground: var(--ink-900);
+    --primary: var(--color-primary);
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 25 100% 67%;
+    --primary-glow: 30 100% 63%;
+
+    --primary-dark: 25 100% 47%;
+    --secondary: var(--color-secondary);
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 203 78% 34%;
+
+    /* Neutral Grays */
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 46%;
+    --muted-dark: 220 13% 91%;
+
+    --accent: 220 13% 96%;
+    --accent-foreground: 222 25% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 243 82% 62%;
+
+    /* Design System Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 57%), hsl(25 100% 67%));
+    --gradient-secondary: linear-gradient(to bottom, hsla(203 78% 24% / 0.95), hsla(203 78% 24% / 0.6));
+    --gradient-success: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(142, 69%, 58%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210 17% 98%) 0%, hsl(240 5% 96%) 100%);
+
+    /* Enterprise Tab Theme Variables */
+    --brand-10: rgba(242, 126, 44, 0.10);
+    --brand-16: rgba(242, 126, 44, 0.16);
+    --brand-border: #FFE8D9;
+    --ink-400: #8B8B95;
+    --surface: #FFFFFF;
+    --focus: rgba(37, 99, 235, 0.40);
+    --radius-pill: 999px;
+    --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-border: 0 0 0 1px rgba(0, 0, 0, 0.06);
+
+    /* AI-themed Backgrounds */
+    --bg-glass: rgba(255, 255, 255, 0.1);
+    --bg-blur: rgba(255, 255, 255, 0.8);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 40px hsla(25 95% 57% / 0.3);
+    --shadow-active: 0 2px 6px hsla(25 95% 57% / 0.2);
+
+    --radius: 0.75rem;
+    --shadow-card: 0 40px 100px -20px rgba(0, 0, 0, 0.1);
+    --shadow-button: 0 20px 40px -10px hsl(25 100% 50% / 0.35);
+    --shadow-input-focus: 0 0 0 4px hsl(25 100% 50% / 0.06);
+    --shadow-soft: 0 4px 20px -4px rgba(0, 0, 0, 0.08);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 25 95% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 203 78% 24%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-weight: 400;
+  }
+
+  /* Heading weights — InsideAIML-style lighter hierarchy */
+  h1 {
+    font-weight: 500 !important;
+  }
+
+  h2, h3 {
+    font-weight: 400 !important;
+  }
+
+  h4, h5, h6 {
+    font-weight: 300 !important;
+  }
+
+  /* ── Global section heading size standard ───────────────────
+     These defaults are overridden by explicit Tailwind utility classes.
+     They serve as a fallback for any h2/h3 without explicit sizing.
+  ─────────────────────────────────────────────────────────── */
+  h2:not([class*='text-']) {
+    font-size: 1.5rem;       /* 24px = text-2xl */
+  }
+  @media (min-width: 640px) {
+    h2:not([class*='text-']) { font-size: 1.875rem; } /* text-3xl */
+  }
+  @media (min-width: 1024px) {
+    h2:not([class*='text-']) { font-size: 2.25rem; }  /* text-4xl */
+  }
+
+  b, strong,
+  [class*='font-bold'] {
+    font-weight: 500 !important;
+  }
+
+  [class*='font-extrabold'] {
+    font-weight: 500 !important;
+  }
+
+  [class*='font-black'] {
+    font-weight: 600 !important;
+  }
+
+  [class*='font-semibold'] {
+    font-weight: 400 !important;
+  }
+
+  [class*='font-medium'] {
+    font-weight: 300 !important;
+  }
+
+  /* Prevent horizontal scroll */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+}
+
+/* =========================
+   POPPINS FONT SYSTEM
+   ========================= */
+
+/* Hero Heading */
+.hero-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 92px;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+.hero-heading .highlight {
+  font-weight: 600;
+}
+
+/* Subheading */
+.hero-subheading {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+/* Nav Links */
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+/* Button Text */
+.button-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* Card Titles */
+.card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+/* Body Text */
+.body-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  line-height: 1.7;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* Small Labels */
+.label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 46px;
+    line-height: 1;
+  }
+  .hero-subheading {
+    font-size: 20px;
+  }
+  .card-title {
+    font-size: 30px;
+  }
+  .body-text {
+    font-size: 18px;
+  }
+}
+
+/* ── CRM hero: monitor + external LED keyboard ────────────────── */
+.crm-desk-ambient {
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(249, 115, 22, 0.1) 0%, rgba(249, 115, 22, 0.055) 45%, transparent 74%);
+  filter: blur(38px);
+}
+
+/* `perspective` only — deliberately NOT `preserve-3d`. The keyboard is the one
+   rotated part, and in a shared 3D space its tilted plane intersects the
+   coplanar monitor/stand siblings and gets sliced by them. Flattening each
+   child to its own 2D projection keeps normal paint order. */
+.crm-desk {
+  position: relative;
+  perspective-origin: 50% 32%;
+}
+
+/* Every rigid part of the scene is centred on the same axis. */
+.crm-monitor,
+.crm-monitor-neck,
+.crm-monitor-foot,
+.crm-keyboard,
+.crm-kb-underglow {
+  position: absolute;
+  left: 50%;
+}
+
+/* ── Monitor ── */
+.crm-monitor {
+  top: 0;
+  transform: translateX(-50%);
+  border-radius: 13px 13px 10px 10px;
+  background: linear-gradient(162deg, #3d434b 0%, #23282e 20%, #14171b 56%, #1c2025 84%, #2a2f36 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.19),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+    0 22px 34px rgba(15, 23, 42, 0.17),
+    0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+.crm-monitor-screen {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #05070a;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.85),
+    inset 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+/* One narrow sheen across the top-left of the glass. Kept faint so it reads as
+   glass without washing out the mostly-white screenshot underneath. */
+.crm-screen-glare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.05) 16%,
+    rgba(255, 255, 255, 0) 34%
+  );
+}
+
+/* Power indicator on the chin. */
+.crm-monitor-led {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: #fb923c;
+  box-shadow: 0 0 7px 2px rgba(251, 146, 60, 0.75);
+}
+
+/* ── Stand ── */
+/* Same anodised space grey as the panel and the keyboard case — a silver stand
+   reads as a different machine bolted underneath. Kept a step lighter than the
+   panel so the parts still separate. */
+.crm-monitor-neck {
+  /* Slight taper: narrower where it meets the panel, flaring to the foot. */
+  transform: translateX(-50%);
+  clip-path: polygon(31% 0, 69% 0, 100% 100%, 0 100%);
+  background: linear-gradient(90deg, #23272d 0%, #454b54 22%, #575e68 45%, #3a3f47 72%, #21252b 100%);
+  box-shadow: 0 5px 9px rgba(15, 23, 42, 0.2);
+}
+
+.crm-monitor-foot {
+  transform: translateX(-50%);
+  border-radius: 5px 5px 9px 9px;
+  background: linear-gradient(180deg, #5a616a 0%, #464c55 34%, #373c44 72%, #282c33 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    0 7px 14px rgba(15, 23, 42, 0.24),
+    0 2px 4px rgba(15, 23, 42, 0.16);
+}
+
+/* ── External keyboard: MacBook, space grey with white backlight ── */
+/* Soft pool of light the backlight throws onto the desk behind the board. */
+.crm-kb-underglow {
+  height: 60px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(148, 163, 184, 0.34) 0%, rgba(100, 116, 139, 0.14) 46%, transparent 74%);
+  filter: blur(18px);
+}
+
+/* The top case: anodised space-grey aluminium, milled edge, thin profile.
+   transform-origin at the top edge means the tilt lays the board back from
+   where it meets the desk, keeping its far edge anchored. */
+.crm-keyboard {
+  transform-origin: 50% 0;
+  border-radius: 8px;
+  padding: 11px;
+  background: linear-gradient(180deg, #565c65 0%, #454b53 34%, #383d45 72%, #2c3037 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.45),
+    0 18px 28px rgba(15, 23, 42, 0.28),
+    0 3px 6px rgba(15, 23, 42, 0.18);
+}
+
+/* Key wells are milled into the top case, so they read a shade darker. */
+.crm-kb-plate {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #202429 0%, #171a1e 100%);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.crm-kb-row {
+  display: flex;
+}
+
+/* Each key is a positioning box one or more units wide; the cap sits inside it
+   with a narrow gutter, and ::before is the backlight escaping around the cap
+   edges — steady white, the way a MacBook's is. */
+.crm-key {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.crm-key::before {
+  content: "";
+  position: absolute;
+  /* Bleeds a touch outside the key cell so the escaping light forms a visible
+     ring around the cap rather than hiding entirely underneath it. */
+  inset: -1.4px;
+  border-radius: 6px;
+  background: rgba(255, 250, 236, 0.36);
+  filter: blur(1.6px);
+}
+
+/* Chiclet cap: flat black top, tight radius, shallow travel. */
+.crm-key-cap {
+  position: absolute;
+  inset: 1.6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3.5px;
+  background: linear-gradient(180deg, #23262b 0%, #191c20 52%, #101216 100%);
+  box-shadow:
+    inset 0 0.5px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -0.5px 0 rgba(0, 0, 0, 0.7),
+    0 1px 0 rgba(0, 0, 0, 0.85),
+    0 1.5px 2.5px rgba(0, 0, 0, 0.45),
+    0 0 3px 0.5px rgba(255, 250, 235, 0.34);
+  color: #f4f6f8;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-shadow: 0 0 5px rgba(255, 252, 244, 0.9);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Caps printed with a word rather than a glyph — Apple sets these a size down. */
+.crm-key-cap-word {
+  font-size: 6px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Inverted-T arrow cluster: full-height left/right, half-height up/down. */
+.crm-key-arrows {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.crm-key-cap-arrow {
+  font-size: 5.5px;
+}
+
+.crm-key-cap-up {
+  inset: 1.6px 1.6px 50%;
+  align-items: flex-end;
+  padding-bottom: 1px;
+}
+
+.crm-key-cap-down {
+  inset: 50% 1.6px 1.6px;
+  align-items: flex-start;
+  padding-top: 1px;
+}
+
+/* Keep the locked screen projection independent from the page's generic
+   entrance animation, which otherwise changes its measured crop offsets. */
+.scroll-animate.in-view .crm-monitor-screen > img {
+  animation: none;
+  transform: none;
+}
+
+/* ── Scroll Animations ─────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(44px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Deep inner-element animation: headings, images, paragraphs ── */
+/* These kick in when a parent section gets .in-view */
+.scroll-animate.in-view h1,
+.scroll-animate.in-view h2,
+.scroll-animate.in-view h3,
+.scroll-animate.in-view h4 {
+  animation: fadeUpInner 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
+}
+.scroll-animate.in-view p {
+  animation: fadeUpInner 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+.scroll-animate.in-view img {
+  animation: fadeUpInner 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
+}
+
+@keyframes fadeUpInner {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Respect user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate,
+  .scroll-animate-left,
+  .scroll-animate-right,
+  .scroll-animate-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-animate-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+.scroll-animate-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-animate-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* stagger children inside an animated section */
+.scroll-animate-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scroll-animate-stagger.in-view > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0ms; }
+.scroll-animate-stagger.in-view > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 80ms; }
+.scroll-animate-stagger.in-view > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 160ms; }
+.scroll-animate-stagger.in-view > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 240ms; }
+.scroll-animate-stagger.in-view > *:nth-child(5) { opacity: 1; transform: none; transition-delay: 320ms; }
+.scroll-animate-stagger.in-view > *:nth-child(6) { opacity: 1; transform: none; transition-delay: 400ms; }
+.scroll-animate-stagger.in-view > *:nth-child(7) { opacity: 1; transform: none; transition-delay: 480ms; }
+.scroll-animate-stagger.in-view > *:nth-child(8) { opacity: 1; transform: none; transition-delay: 540ms; }
+.scroll-animate-stagger.in-view > *:nth-child(9) { opacity: 1; transform: none; transition-delay: 600ms; }
+.scroll-animate-stagger.in-view > *:nth-child(10) { opacity: 1; transform: none; transition-delay: 660ms; }
+/* ──────────────────────────────────────────────────────────── */
+
+/* Problem Bento Cards — scroll list & shimmer */
+@keyframes scrollUpList {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes shimmerSlide {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+.animate-scroll-up {
+  animation: scrollUpList 14s linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmerSlide 2.8s ease-in-out infinite;
+}
+
+/* ──────────────────────────────────────────────────────────── */
+
+@layer components {
+  .legal-policy-shell {
+    width: 100%;
+    max-width: 88rem;
+    margin: 0 auto;
+    padding: 6.5rem 1rem 3.5rem;
+  }
+
+  .legal-policy-header {
+    max-width: 56rem;
+  }
+
+  .legal-policy-content section {
+    padding: 2rem 0;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .legal-policy-content section:first-of-type {
+    margin-top: 0.5rem;
+  }
+
+  .legal-policy-footer {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .legal-policy-page section[class*='rounded-2xl'] {
+    background: transparent !important;
+    border-top-color: #e5e7eb !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .legal-policy-page div[class*='rounded-xl'] {
+    background: #fafafa !important;
+    border-color: #e5e7eb !important;
+    border-radius: 1rem !important;
+    box-shadow: none !important;
+  }
+
+  .legal-policy-page h2 {
+    color: #111827;
+  }
+
+  @media (min-width: 640px) {
+    .legal-policy-shell {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .legal-policy-shell {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  .legal-policy-page [class*='bg-green-'],
+  .legal-policy-page [class*='bg-purple-'],
+  .legal-policy-page [class*='bg-yellow-'],
+  .legal-policy-page [class*='bg-orange-'] {
+    background: #fff !important;
+  }
+
+  .legal-policy-page [class*='border-green-'],
+  .legal-policy-page [class*='border-purple-'],
+  .legal-policy-page [class*='border-yellow-'],
+  .legal-policy-page [class*='border-orange-'] {
+    border-color: #e5e7eb !important;
+  }
+
+  .legal-policy-page [class*='text-green-'],
+  .legal-policy-page [class*='text-purple-'],
+  .legal-policy-page [class*='text-yellow-'],
+  .legal-policy-page [class*='text-orange-'] {
+    color: #374151 !important;
+  }
+
+  .gradient-orange {
+    background: var(--gradient-orange);
+  }
+
+  .abstract-bg {
+    background-color: hsl(var(--card));
+    background-image:
+      var(--gradient-subtle),
+      url("https://www.transparenttextures.com/patterns/cubes.png");
+  }
+
+  .custom-input {
+    @apply border border-border bg-card/80 transition-all duration-200;
+  }
+
+  .custom-input:focus {
+    @apply border-primary bg-card;
+    box-shadow: var(--shadow-input-focus);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+}
+
+@layer utilities {
+  .animate-slide-up {
+    animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Ensure all containers respect viewport width */
+  /* .container,
+  .w-full {
+    max-width: 100%;
+  } */
+
+  /* Enterprise Tab Styling */
+  .enterprise-tab-container {
+    background: transparent;
+    gap: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 8px;
+  }
+
+  .enterprise-tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    color: var(--ink-600);
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    font-size: 0.875rem;
+    box-shadow: var(--shadow-border);
+    transition: background .16s ease, box-shadow .16s ease, color .16s ease, transform .02s ease;
+    position: relative;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .enterprise-tab:hover:not(.enterprise-tab-active) {
+    background: #FAFAFB;
+    color: var(--ink-900);
+    box-shadow: var(--shadow-subtle), var(--shadow-border);
+  }
+
+  .enterprise-tab:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-border), 0 0 0 2px var(--focus);
+  }
+
+  .enterprise-tab-active {
+    background: var(--brand-10) !important;
+    color: var(--ink-900) !important;
+    box-shadow: var(--shadow-active), 0 0 0 1px var(--brand-border) !important;
+  }
+
+  .enterprise-tab-active::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--brand);
+  }
+
+  /* Icon styling for enterprise tabs */
+  .enterprise-tab svg {
+    transition: color 0.16s ease;
+  }
+
+  .enterprise-tab:hover svg {
+    color: var(--ink-900);
+  }
+
+  .enterprise-tab-active svg {
+    color: var(--brand);
+  }
+
+  /* Override shadcn tab styles for enterprise tabs */
+  .enterprise-tab[data-state="active"] {
+    background: var(--brand-10) !important;
+    color: var(--ink-900) !important;
+    box-shadow: var(--shadow-active), 0 0 0 1px var(--brand-border) !important;
+  }
+
+  .enterprise-tab[data-state="inactive"] {
+    background: var(--surface);
+    color: var(--ink-600);
+    box-shadow: var(--shadow-border);
+  }
+
+  /* Fade-in animation for messages */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out forwards;
+  }
+
+  .animate-dropdown {
+    animation: dropdownFade 0.2s ease-out;
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 8px hsl(var(--success) / 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 16px hsl(var(--success) / 0.6);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Dynamic Authentication Page Animations */
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes float-delayed {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes gradient-shift {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    70% {
+      transform: scale(0.9);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  .animate-shimmer {
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  .hover-scale {
+    transition: transform 0.2s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-glow {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .hover-glow::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, hsl(25 95% 57%), hsl(213 94% 68%));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .hover-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Vertical text for sidebar toggle */
+  .writing-mode-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* Logo Carousel Animation */
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-fast {
+    animation: scroll-right 20s linear infinite;
+  }
+
+  /* Hide scrollbar while maintaining scroll functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+  }
+}

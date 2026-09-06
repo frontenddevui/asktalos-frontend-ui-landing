@@ -1,0 +1,58 @@
+/* Circular orbit animation */
+@keyframes circularOrbit {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+/* Responsive orbit radius */
+@media (min-width: 640px) {
+  @keyframes circularOrbit {
+    0% {
+      transform: rotate(0deg) translateX(140px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(140px) rotate(-360deg);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes circularOrbit {
+    0% {
+      transform: rotate(0deg) translateX(160px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(160px) rotate(-360deg);
+    }
+  }
+}
+
+/* Each card starts at a different position on the orbit */
+.product-card-orbit-0 {
+  animation: circularOrbit 20s linear infinite;
+  animation-delay: 0s;
+}
+
+.product-card-orbit-1 {
+  animation: circularOrbit 20s linear infinite;
+  animation-delay: -4s; /* 72 degrees offset */
+}
+
+.product-card-orbit-2 {
+  animation: circularOrbit 20s linear infinite;
+  animation-delay: -8s; /* 144 degrees offset */
+}
+
+.product-card-orbit-3 {
+  animation: circularOrbit 20s linear infinite;
+  animation-delay: -12s; /* 216 degrees offset */
+}
+
+.product-card-orbit-4 {
+  animation: circularOrbit 20s linear infinite;
+  animation-delay: -16s; /* 288 degrees offset */
+}
